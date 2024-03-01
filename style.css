@@ -16,6 +16,41 @@ body, html{
     background-position: center;
 }
 
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.419);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.container, .begin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    color: white;
+    background-color: green;
+    font-weight: 600;
+    font-size: 2rem;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 300ms all ease-in-out;
+}
+
+.begin:hover{
+    transform: scale(1.1);
+    background-color: rgb(2, 202, 2);
+}
+
 canvas{
     position: absolute;
     top: 0;
@@ -29,6 +64,7 @@ canvas{
 #layout{
     z-index: 1;
 }
+
 
 .score{
     position: absolute;
@@ -68,4 +104,27 @@ canvas{
     width: 180px;
     height: 2rem;
     font-size: 1.25rem;
+}
+
+.lost{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.57);
+    font-size: 8rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+   -webkit-text-stroke: 4px black;
+   text-transform: uppercase;
+   user-select: none;
+}
+
+.hidden{
+    display: none !important;
 }
