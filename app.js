@@ -6,7 +6,7 @@ const begin = document.querySelector(".begin");
 const menu = document.querySelector(".menu");
 begin.addEventListener("click", () => {
     menu.classList.toggle("hidden")
-    playAudio("/run-sound.wav");
+    playAudio("run-sound.wav");
 })
 
 const game = document.querySelector("#game")
@@ -99,10 +99,10 @@ class Rivals{
                     id: i,
                     color: colors[Math.floor(Math.random()*colors.length)],
                     score: 800,
-                    // x: Math.floor(w*Math.random()),
-                    // y: Math.floor(h*Math.random()),
-                    x: 1000,
-                    y: 800,
+                    x: Math.floor(w*Math.random()),
+                    y: Math.floor(h*Math.random()),
+                    // x: 1000,
+                    // y: 800,
                 }
                 array.push(object)
             }
@@ -135,7 +135,7 @@ class Rivals{
     }
 }
 
-let rivals = new Rivals(1, game.width, game.height);
+let rivals = new Rivals(3, game.width, game.height);
 
 const drawRivals = (ctx, score) => {
     rivals.rivals.map((rival, index) => {
@@ -213,7 +213,7 @@ drawPlayer = (event, ctx, x, y, speed) => {
                 score = 0;
                 scoreContainer.innerText = `You lost, boy!`
 
-                playAudio("/lost.wav");
+                playAudio("lost.wav");
 
                 const lost = document.createElement("div");
                 lost.classList.add("lost");
