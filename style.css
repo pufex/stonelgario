@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body, html{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('watermark.svg');
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position: center;
+}
+
+canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#game{
+    z-index: 2;
+}
+
+#layout{
+    z-index: 1;
+}
+
+.score{
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background-color: rgba(0, 0, 0, 0.116);
+    color: red;
+    height: 3rem;
+    width: 300px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggles{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.toggles span{
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.toggles input{
+    width: 180px;
+    height: 2rem;
+    font-size: 1.25rem;
+}
